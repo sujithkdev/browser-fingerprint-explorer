@@ -1,0 +1,238 @@
+/* Define custom CSS variables */
+:root {
+  --color-bg: #ffffff;
+  --color-default: #000;
+  --color-fg: #174ea6;
+  --color-primary: #104294;
+  --color-selection-text: #fff;
+  --color-answer: #174ea6;
+  --font-fira-code: "Fira Code", monospace;
+  --font-fira-mono: "Fira Mono", monospace;
+}
+
+/* Reset default styles for all elements */
+* {
+  box-sizing: border-box;
+  font-size: 14.8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for selected text */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-selection-text);
+}
+
+/* Style for scrollbar */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  margin: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-fg);
+}
+
+/* Style for body */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-default);
+  font-family: var(--font-fira-mono);
+  height: 100%;
+  width: 100%;
+}
+
+/* Bold text styles */
+b {
+  color: var(--color-default);
+  font-family: var(--font-fira-mono);
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+/* Style the header element */
+.header {
+  align-items: center;
+  background-color: var(--color-bg);
+  display: flex;
+  height: 43px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  user-select: none;
+  width: 100%;
+}
+
+/* Logo styles */
+#df {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  text-align: center;
+  width: auto;
+}
+
+/* Button container styles */
+.buttons {
+  display: flex;
+  left: 0;
+  position: absolute;
+}
+
+/* Button styles */
+.button {
+  border-radius: 50%;
+  height: 14px;
+  margin-left: 12px;
+  width: 14px;
+}
+
+.button:hover {
+  border: 1px solid #56576c;
+  box-shadow: 0px 0px 7px #6c6e91;
+  transform: scale(1.1);
+}
+
+/* Style the buttons with different colors */
+.red {
+  background-color: #ff5f56;
+}
+
+.yellow {
+  background-color: #ffbd2e;
+}
+
+.green {
+  background-color: #27c93f;
+}
+
+/* Style for terminal screen */
+.screen {
+  background: var(--color-selection-text);
+  height: 100%;
+  overflow-y: scroll;
+  padding: 10px 10px 60px 10px;
+  position: fixed;
+  scrollbar-color: var(--color-fg) var(--color-selection-text);
+  scrollbar-width: thin;
+  width: 100%;
+}
+
+/* Command line styles */
+.command-line {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+/* Prompt styles */
+.prompt {
+  color: var(--color-default);
+}
+
+/* Style the input text field */
+input[type="text"] {
+  background-color: var(--color-selection-text);
+  border: none;
+  caret-color: var(--color-primary);
+  color: var(--color-default);
+  font-family: var(--font-fira-code);
+  margin-left: 5px;
+  outline: none;
+  text-transform: lowercase;
+  width: 100%;
+}
+
+/* Style the output element */
+.output {
+  color: var(--color-default);
+  font-family: var(--font-fira-code);
+  line-height: 24px;
+  overflow: hidden;
+}
+
+/* Style the typing animation */
+.typing {
+  animation: type 480ms linear;
+  color: var(--color-default);
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Define keyframes for typing animation */
+@keyframes type {
+  0% {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0%;
+  }
+  1% {
+    white-space: nowrap;
+    width: 1%;
+  }
+  50% {
+    white-space: nowrap;
+    width: 50%;
+  }
+  95% {
+    white-space: nowrap;
+    width: 95%;
+  }
+  97% {
+    white-space: initial;
+    width: 97%;
+    word-wrap: break-word;
+  }
+  100% {
+    white-space: initial;
+    width: 100%;
+    word-wrap: break-word;
+  }
+}
+
+/* Style for map */
+#map {
+  height: 340px;
+  width: 97%;
+  border-radius: 4px;
+  margin: 0.5rem auto;
+}
+
+.terminal {
+  margin: 10px;
+  height: calc(100dvh - 20px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--color-primary);
+  border-radius: 8px;
+}
+.header {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-primary);
+  flex-shrink: 0;
+}
+.screen {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-bg);
+  overflow-y: auto;
+}
+
+
+.output > section > div {
+  color: var(--color-answer);
+}
+
+
+
+.category-heading {
+  width: fit-content;
+  background-color: #fff2a8;
+  padding: 0 0.35em;
+  border-radius: 3px;
+}
+
