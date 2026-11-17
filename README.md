@@ -2,6 +2,8 @@
 
 A hands-on privacy awareness project. Open the terminal-style page to see which details your browser exposes, which details the page estimates, and which actions involve another service or a browser permission.
 
+[Open the live demo](https://browser-fingerprint-explorer.vercel.app)
+
 ## Try it locally
 
 Download or clone this repository and open index.html in a browser. The project uses HTML, CSS, and JavaScript and has no build step. An internet connection is required for the IP lookup and hosted fonts. Browser support and privacy settings affect the results.
