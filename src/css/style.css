@@ -192,14 +192,6 @@ input[type="text"] {
   }
 }
 
-/* Style for map */
-#map {
-  height: 340px;
-  width: 97%;
-  border-radius: 4px;
-  margin: 0.5rem auto;
-}
-
 .terminal {
   margin: 10px;
   height: calc(100dvh - 20px);
@@ -236,3 +228,6 @@ input[type="text"] {
   border-radius: 3px;
 }
 
+
+.command-result video { display: block; width: min(100%, 32rem); }
+.command-result { overflow-wrap: anywhere; }

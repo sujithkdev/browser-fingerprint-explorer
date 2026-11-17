@@ -4,7 +4,7 @@ A hands-on privacy awareness project. Open the terminal-style page to see which 
 
 ## Try it locally
 
-Download or clone this repository and open index.html in a browser. The project uses HTML, CSS, and JavaScript and has no build step. An internet connection is required for the IP lookup, hosted fonts, and map resources. Browser support and privacy settings affect the results.
+Download or clone this repository and open index.html in a browser. The project uses HTML, CSS, and JavaScript and has no build step. An internet connection is required for the IP lookup and hosted fonts. Browser support and privacy settings affect the results.
 
 For a local web server, run the following from the repository directory if Python is installed, then open http://localhost:8000.
 
@@ -29,14 +29,14 @@ For a local web server, run the following from the repository directory if Pytho
 
 - JavaScript reads browser properties and displays the report in the page. Many display, language, and capability readings are available without a permission prompt.
 - The page automatically requests network information from ipapi.co. The service receives the public IP used for that request and returns an approximate location and network metadata. A VPN or mobile network can change the result.
-- When the terminal prompt starts, the app separately requests device location through the browser. Your browser controls permission and may remember an earlier choice. Denying this request still allows the IP-based estimate. The location command uses the available coordinates and requests map tiles from OpenStreetMap.
-- The page loads fonts from Google Fonts and map software from a CDN. Opening the HTML file locally can still initiate these network requests.
+- Entering the location command requests device location through the browser. Your browser controls permission and may remember an earlier choice. Denying this request still allows the IP-based estimate.
+- The page loads fonts from Google Fonts. Opening the HTML file locally can still initiate these network requests.
 - Terminal input activity is displayed locally. Visit timestamps use the visitTimes key in local storage. Clearing this site's browser data removes those timestamps. The project has no application backend for receiving complete reports.
 
 ## Two experiments
 
 1. Record the screen and viewport sizes. Resize the browser window and reload. Compare both readings to see which measurement follows the window.
-2. Deny device location when asked and inspect the city field. If the IP lookup succeeds, a city estimate can still appear because it comes from the network lookup.
+2. Enter location and deny device location when asked and inspect the city field. If the IP lookup succeeds, a city estimate can still appear because it comes from the network lookup.
 
 ## Terminal commands
 
@@ -45,7 +45,16 @@ For a local web server, run the following from the repository directory if Pytho
 | help | List commands. |
 | df | Explain the demonstration. |
 | pip install df | Display the report again. This is a simulated terminal command. |
-| location | Show the available coordinates on a map. |
+| permissions | Inspect supported permission states without prompting. |
+| location | Request device location and display latitude and longitude. |
+| ip location | Display the approximate coordinates from the automatic IP lookup. |
+| camera | Preview the camera locally. |
+| microphone | Display a live microphone level meter locally. |
+| screen | Choose a screen, tab, or window to preview locally. |
+| stop | End the current media demo. Each preview also has a Stop button. |
+| notifications | Request permission and display one test notification. |
+| clipboard read | Display current clipboard text in the terminal. |
+| clipboard write | Replace clipboard text with the sample Browser Fingerprint Explorer. |
 | clear | Clear the terminal display. Saved visit timestamps persist. |
 
 ## What is browser fingerprinting?
